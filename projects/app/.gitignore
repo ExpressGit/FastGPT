@@ -30,3 +30,5 @@ testApi/
 local/
 .husky/
 data/*.local.*
+pg/data/*
+pg/*
