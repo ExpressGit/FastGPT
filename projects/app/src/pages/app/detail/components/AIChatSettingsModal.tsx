@@ -42,23 +42,7 @@ const AIChatSettingsModal = ({
   return (
     <MyModal
       isOpen
-      title={
-        <Flex alignItems={'flex-end'}>
-          {t('app.Quote Prompt Settings')}
-          {feConfigs?.show_doc && (
-            <Link
-              href={'https://doc.fastgpt.run/docs/use-cases/prompt/'}
-              target={'_blank'}
-              ml={1}
-              textDecoration={'underline'}
-              fontWeight={'normal'}
-              fontSize={'md'}
-            >
-              查看说明
-            </Link>
-          )}
-        </Flex>
-      }
+      title={<Flex alignItems={'flex-end'}>{t('app.Quote Prompt Settings')}</Flex>}
       w={'700px'}
     >
       <ModalBody>

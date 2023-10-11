@@ -467,7 +467,7 @@ export const HttpModule: FlowModuleTemplateType = {
       type: FlowInputItemTypeEnum.input,
       label: '请求地址',
       description: '请求目标地址',
-      placeholder: 'https://api.fastgpt.run/getInventory',
+      placeholder: '',
       required: true
     },
     Input_Template_TFSwitch

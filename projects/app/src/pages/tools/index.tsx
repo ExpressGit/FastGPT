@@ -24,24 +24,6 @@ const Tools = () => {
             link: '/appStore'
           }
         ]
-      : []),
-    ...(feConfigs?.show_git
-      ? [
-          {
-            icon: 'git',
-            label: 'GitHub 地址',
-            link: 'https://github.com/labring/FastGPT'
-          }
-        ]
-      : []),
-    ...(feConfigs?.show_doc
-      ? [
-          {
-            icon: 'courseLight',
-            label: '使用文档',
-            link: 'https://doc.fastgpt.run/docs/intro'
-          }
-        ]
       : [])
   ];
 

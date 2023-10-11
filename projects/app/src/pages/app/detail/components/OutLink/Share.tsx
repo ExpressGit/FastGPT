@@ -352,14 +352,6 @@ function EditLinkModal({
                 {...register('limit.hookUrl')}
               />
             </Flex>
-            <Link
-              href="https://doc.fastgpt.run/docs/development/openapi/#分享链接中增加额外-query"
-              target={'_blank'}
-              fontSize={'sm'}
-              color={'myGray.500'}
-            >
-              {t('outlink.token auth use cases')}
-            </Link>
           </>
         )}
 

@@ -63,7 +63,7 @@ export const authUser = async ({
       return Promise.reject(ERROR_ENUM.unAuthorization);
     }
 
-    // Bearer fastgpt-xxxx-appId
+    // Bearer
     const auth = authorization.split(' ')[1];
     if (!auth) {
       return Promise.reject(ERROR_ENUM.unAuthorization);
@@ -123,7 +123,7 @@ export const authUser = async ({
     uid = res.userId;
     authType = AuthUserTypeEnum.outLink;
   } else if (authToken && (cookie || token)) {
-    // user token(from fastgpt web)
+    //
     uid = await authCookieToken(cookie, token);
     authType = AuthUserTypeEnum.token;
   } else if (authRoot && rootkey) {

@@ -223,34 +223,6 @@ const UserInfo = () => {
             )}
           </Flex>
         </Box>
-        {feConfigs?.show_doc && (
-          <>
-            <Flex
-              mt={4}
-              w={['85%', '300px']}
-              py={3}
-              px={6}
-              border={theme.borders.sm}
-              borderWidth={'1.5px'}
-              borderRadius={'md'}
-              alignItems={'center'}
-              cursor={'pointer'}
-              userSelect={'none'}
-              onClick={() => {
-                window.open(`https://doc.fastgpt.run/docs/intro`);
-              }}
-            >
-              <MyIcon name={'courseLight'} w={'18px'} />
-              <Box ml={2} flex={1}>
-                {t('system.Help Document')}
-              </Box>
-              <Box w={'8px'} h={'8px'} borderRadius={'50%'} bg={'#67c13b'} />
-              <Box fontSize={'md'} ml={2}>
-                V{systemVersion}
-              </Box>
-            </Flex>
-          </>
-        )}
         {feConfigs?.show_openai_account && (
           <>
             <Divider my={3} />

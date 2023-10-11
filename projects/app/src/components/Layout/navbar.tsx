@@ -22,7 +22,6 @@ const Navbar = ({ unread }: { unread: number }) => {
   const { t } = useTranslation();
   const router = useRouter();
   const { userInfo } = useUserStore();
-  const { gitStar } = useGlobalStore();
   const { lastChatAppId, lastChatId } = useChatStore();
   const navbarList = useMemo(
     () => [
@@ -168,32 +167,7 @@ const Navbar = ({ unread }: { unread: number }) => {
         </Box>
       )}
       {feConfigs?.show_doc && (
-        <MyTooltip label={t('home.Docs')} placement={'right-end'}>
-          <Box
-            {...itemStyles}
-            mb={0}
-            color={'#9096a5'}
-            onClick={() => {
-              window.open(`https://doc.fastgpt.run/docs/intro`);
-            }}
-          >
-            <MyIcon name={'courseLight'} width={'26px'} height={'26px'} />
-          </Box>
-        </MyTooltip>
-      )}
-      {feConfigs?.show_git && (
-        <MyTooltip label={`Git Star: ${gitStar}`} placement={'right-end'}>
-          <Link
-            as={NextLink}
-            href="https://github.com/labring/FastGPT"
-            target={'_blank'}
-            {...itemStyles}
-            mt={0}
-            color={'#9096a5'}
-          >
-            <MyIcon name={'git'} width={'22px'} height={'22px'} />
-          </Link>
-        </MyTooltip>
+        <MyTooltip label={t('home.Docs')} placement={'right-end'}></MyTooltip>
       )}
     </Flex>
   );

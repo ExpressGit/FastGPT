@@ -53,7 +53,7 @@ const ApiKeyTable = ({ tips, appId }: { tips: string; appId?: string }) => {
   const { Loading } = useLoading();
   const theme = useTheme();
   const { copyData } = useCopyData();
-  const [baseUrl, setBaseUrl] = useState('https://fastgpt.run/api');
+  const [baseUrl, setBaseUrl] = useState('');
   const [editData, setEditData] = useState<EditProps>();
   const [apiKey, setApiKey] = useState('');
 
@@ -82,12 +82,7 @@ const ApiKeyTable = ({ tips, appId }: { tips: string; appId?: string }) => {
             <Box fontSize={['md', 'xl']} fontWeight={'bold'}>
               API 秘钥管理
             </Box>
-            <Link
-              href={feConfigs.openAPIUrl || 'https://doc.fastgpt.run/docs/development/openapi'}
-              target={'_blank'}
-              ml={1}
-              color={'myBlue.600'}
-            >
+            <Link href={feConfigs.openAPIUrl} target={'_blank'} ml={1} color={'myBlue.600'}>
               查看文档
             </Link>
           </Flex>

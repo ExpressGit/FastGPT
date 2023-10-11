@@ -47,9 +47,13 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 RUN sed -i 's/https/http/' /etc/apk/repositories
-RUN apk add curl \
-  && apk add ca-certificates \
-  && update-ca-certificates
+# RUN apk add curl \
+#   && apk add ca-certificates \
+#   && update-ca-certificates
+
+RUN brew install curl \
+  && brew install ca-certificates 
+  # && update-ca-certificates
 
 # copy running files
 COPY --from=builder /app/projects/$name/public ./projects/$name/public

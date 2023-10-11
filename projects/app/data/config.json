@@ -40,6 +40,13 @@
       "price": 0,
       "defaultToken": 500,
       "maxToken": 3000
+    },
+    {
+      "model": "m3e-base",
+      "name": "m3e",
+      "price": 0,
+      "defaultToken": 500,
+      "maxToken": 3000
     }
   ],
   "QAModel": {

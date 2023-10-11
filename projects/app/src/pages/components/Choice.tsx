@@ -14,16 +14,14 @@ const Choice = () => {
           {
             icon: '/imgs/home/icon_1.svg',
             title: t('home.Choice Open'),
-            desc: t('home.Choice Open Desc', { title: feConfigs?.systemTitle }),
-            tooltip: '前往 GitHub',
-            onClick: () => window.open('https://github.com/labring/FastGPT', '_blank')
+            desc: t('home.Choice Open Desc', { title: feConfigs?.systemTitle })
           }
         ]
       : [
           {
             icon: '/imgs/home/icon_0.svg',
-            title: t('home.Choice Fast'),
-            desc: t('home.Choice Fast Desc', { title: feConfigs?.systemTitle })
+            title: t('home.Choice '),
+            desc: t('home.Choice  Desc', { title: feConfigs?.systemTitle })
           }
         ]),
     {
@@ -66,7 +64,7 @@ const Choice = () => {
       </Box>
       <Grid px={[5, 0]} gridTemplateColumns={['1fr', `1fr 1fr`, 'repeat(3,1fr)']} gridGap={6}>
         {list.map((item) => (
-          <MyTooltip key={item.title} label={item.tooltip}>
+          <MyTooltip key={item.title}>
             <Flex
               alignItems={'flex-start'}
               border={theme.borders.md}
@@ -77,7 +75,6 @@ const Choice = () => {
               _hover={{
                 bg: 'rgba(255,255,255,0.8)'
               }}
-              onClick={() => item.onClick?.()}
             >
               <Flex
                 flex={'0 0 48px'}

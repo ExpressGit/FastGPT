@@ -3,7 +3,7 @@ export enum OAuthEnum {
   google = 'google'
 }
 export enum BillSourceEnum {
-  fastgpt = 'fastgpt',
+  fastgpt = 'AI',
   api = 'api',
   shareLink = 'shareLink',
   training = 'training'

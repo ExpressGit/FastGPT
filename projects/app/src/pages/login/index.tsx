@@ -110,20 +110,6 @@ const Login = () => {
             borderRadius={isPc ? 'md' : 'none'}
           >
             <DynamicComponent type={pageType} />
-
-            {feConfigs?.show_contact && (
-              <Box
-                fontSize={'sm'}
-                color={'myGray.600'}
-                cursor={'pointer'}
-                position={'absolute'}
-                right={5}
-                bottom={3}
-                onClick={onOpen}
-              >
-                无法登录，点击联系
-              </Box>
-            )}
           </Box>
         </Flex>
 

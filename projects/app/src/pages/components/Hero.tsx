@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 const Hero = () => {
   const router = useRouter();
   const { t } = useTranslation();
-  const { isPc, gitStar } = useGlobalStore();
+  const { isPc } = useGlobalStore();
   const [showVideo, setShowVide] = useState(false);
 
   return (
@@ -21,28 +21,6 @@ const Hero = () => {
         {t('home.desc')}
       </Box>
       <Flex zIndex={1} flexDirection={['column', 'row']} mt={[5, 8]}>
-        {feConfigs?.show_git && (
-          <Button
-            mr={[0, 5]}
-            mb={[5, 0]}
-            fontSize={['xl', '3xl']}
-            h={'auto'}
-            py={[2, 3]}
-            variant={'base'}
-            border={'2px solid'}
-            borderColor={'myGray.800'}
-            transition={'0.3s'}
-            borderRadius={'xl'}
-            _hover={{
-              bg: 'myGray.800',
-              color: 'white'
-            }}
-            leftIcon={<MyIcon name={'git'} w={'20px'} />}
-            onClick={() => window.open('https://github.com/labring/FastGPT', '_blank')}
-          >
-            Stars {(gitStar / 1000).toFixed(1)}k
-          </Button>
-        )}
         <Button
           fontSize={['xl', '3xl']}
           h={['38px', 'auto']}
@@ -94,19 +72,7 @@ const Hero = () => {
             borderRadius={'lg'}
             overflow={'hidden'}
             onClick={(e) => e.preventDefault()}
-          >
-            <video
-              style={{
-                margin: 'auto'
-              }}
-              onClick={(e) => {
-                e.stopPropagation();
-              }}
-              src={'https://otnvvf-imgs.oss.laf.run/fastgpt.mp4'}
-              controls
-              autoPlay
-            />
-          </Box>
+          ></Box>
         </Flex>
       )}
     </Flex>

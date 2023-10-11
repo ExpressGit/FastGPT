@@ -87,7 +87,7 @@ const LoginForm = ({ setPageType, loginSuccess }: Props) => {
   return (
     <>
       <Box fontWeight={'bold'} fontSize={'2xl'} textAlign={'center'}>
-        登录 {feConfigs?.systemTitle}
+        知识库管理后台
       </Box>
       <form onSubmit={handleSubmit(onclickLogin)}>
         <FormControl mt={8} isInvalid={!!errors.username}>
@@ -143,7 +143,7 @@ const LoginForm = ({ setPageType, loginSuccess }: Props) => {
               <Box textAlign={'center'} mt={2} fontSize={'sm'}>
                 使用即代表你同意我们的{' '}
                 <Link
-                  href="https://doc.fastgpt.run/docs/intro/#%e5%85%8d%e8%b4%a3%e5%a3%b0%e6%98%8e"
+                  href="https://lelenote.notion.site/04-ab1eb3e5e203467ebc6a230e2d335945?pvs=4"
                   target={'_blank'}
                   color={'myBlue.600'}
                 >
