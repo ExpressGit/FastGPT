@@ -25,6 +25,7 @@ services:
     ports: # 生产环境建议不要暴露
       - 27017:27017
     networks:
+      - default
       - fastgpt
     environment:
       # 这里的配置只有首次运行生效。修改后，重启镜像是不会生效的。需要把持久化数据删除再重启，才有效果
@@ -39,6 +40,7 @@ services:
     ports:
       - 6001:3000
     networks:
+      - default
       - fastgpt
     depends_on:
       - mongo

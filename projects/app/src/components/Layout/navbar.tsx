@@ -166,9 +166,6 @@ const Navbar = ({ unread }: { unread: number }) => {
           </Link>
         </Box>
       )}
-      {feConfigs?.show_doc && (
-        <MyTooltip label={t('home.Docs')} placement={'right-end'}></MyTooltip>
-      )}
     </Flex>
   );
 };
