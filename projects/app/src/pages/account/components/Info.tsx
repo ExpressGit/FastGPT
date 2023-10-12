@@ -210,7 +210,7 @@ const UserInfo = () => {
             {t('user.Change')}
           </Button>
         </Flex>
-        <Box mt={6} whiteSpace={'nowrap'} w={['85%', '300px']}>
+        {/* <Box mt={6} whiteSpace={'nowrap'} w={['85%', '300px']}>
           <Flex alignItems={'center'}>
             <Box flex={'0 0 80px'}>{t('user.Balance')}:&nbsp;</Box>
             <Box flex={1}>
@@ -222,7 +222,7 @@ const UserInfo = () => {
               </Button>
             )}
           </Flex>
-        </Box>
+        </Box> */}
         {feConfigs?.show_openai_account && (
           <>
             <Divider my={3} />

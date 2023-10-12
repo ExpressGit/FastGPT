@@ -82,9 +82,9 @@ const ApiKeyTable = ({ tips, appId }: { tips: string; appId?: string }) => {
             <Box fontSize={['md', 'xl']} fontWeight={'bold'}>
               API 秘钥管理
             </Box>
-            <Link href={feConfigs.openAPIUrl} target={'_blank'} ml={1} color={'myBlue.600'}>
+            {/* <Link href={feConfigs.openAPIUrl} target={'_blank'} ml={1} color={'myBlue.600'}>
               查看文档
-            </Link>
+            </Link> */}
           </Flex>
           <Box fontSize={'sm'} color={'myGray.600'}>
             {tips}
